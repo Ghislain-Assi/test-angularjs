@@ -1,0 +1,20 @@
+<div class="container mt-3">
+    <h4 class=" text-center text-uppercase">Liste des pays</h4>
+    <hr class="my-2">
+    <div class="card p-2">
+        <table datatable [dtOptions]="dtOptions" class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th scope="col text-uppercase">Code</th>
+                    <th scope="col text-uppercase">Continent</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pays of servicePays">
+                    <td>{{ pays.code }}</td>
+                    <td>{{ pays.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
